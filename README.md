@@ -89,13 +89,39 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
   
 
 ## STM 32 CUBE PROGRAM :
+```#c
+#include "main.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init(); 
+  while (1)
+  {
+  }
+}
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin==GPIO_PIN_9){
+		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_11);
+	}
+}
+```
 
 
 ## Output screen shots of proteus  :
- 
+ <img width="1189" height="818" alt="image" src="https://github.com/user-attachments/assets/d0cf8e7e-a8e4-4fa8-93b6-da9959b19c57" />
+
+ <img width="1195" height="822" alt="image" src="https://github.com/user-attachments/assets/7a3124fd-9933-43f0-9cf1-3f7bef97ff5e" />
+
+
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+ <img width="1190" height="836" alt="image" src="https://github.com/user-attachments/assets/264a5d87-e92c-4a99-8d10-1138034b67bb" />
+
  
  
 ## Result :
