@@ -93,7 +93,6 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 #include "main.h"
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-
 int main(void)
 {
   HAL_Init();
@@ -104,13 +103,11 @@ int main(void)
   }
 }
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	if(GPIO_Pin==GPIO_PIN_9){
+{if(GPIO_Pin==GPIO_PIN_9){
 		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_11);
 	}
 }
 ```
-
 
 ## Output screen shots of proteus  :
  <img width="1189" height="818" alt="image" src="https://github.com/user-attachments/assets/d0cf8e7e-a8e4-4fa8-93b6-da9959b19c57" />
